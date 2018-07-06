@@ -1,0 +1,68 @@
+<% layout('main')%>
+    <section class="sign-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="p-2">
+                                <div class="mb-4 text-center">
+                                    <h2 class="display-4">Sign Up</h2>
+                                </div>
+
+                                <% if(hasError) {%>
+                                    <div class="alert alert-danger" role="alert">
+                                        <div class="container">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">
+                                                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                </span>
+                                            </button>
+                                            <% _.forEach(messages, function(error) {%>
+                                                <strong>
+                                                    <%= error %>
+                                                </strong>
+                                                <br>
+                                                <%})%>
+                                        </div>
+                                    </div>
+                                    <% }%>
+
+                                        <form method="POST">
+                                            <div class="form-group">
+                                                <input type="email" name="email" placeholder="Email Address" class="form-control" autofocus>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="fullname" placeholder="FullName" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="username" placeholder="Usernane" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" name="password" placeholder="Password" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                                            </div>
+                                        </form>
+
+                                        <div class="text-center m-3">
+                                            <span>Or sign up with</span>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a href="/auth/facebook" class="btn btn-facebook btn-block">Facabook</a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="/auth/google" class="btn btn-google btn-block">Google</a>
+                                            </div>
+                                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,30 @@
+.profile-btn{
+    background-color: #f6f9fc;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(50, 50, 93, .15),0 1px 0 rgba(0, 0, 0, .02);
+    &:hover{
+        background-color:$primary-color !important;
+    }
+}
+
+.btn-facebook{
+    background-color: rgb(59, 89, 152);
+    color:#fff;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: rgb(42, 70, 131) !important;
+        color: #fff;
+    }
+}
+
+.btn-google {
+    background-color: #c71610;
+    color: #fff;
+     &:hover,
+     &:active,
+     &:focus {
+         background-color: #af110c !important;
+         color: #fff;
+     }
+}
